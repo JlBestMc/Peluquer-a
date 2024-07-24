@@ -317,11 +317,6 @@ nav#socialNavBar .whatsapp a:focus {
   background-color: var(--white);
 }
 
-nav#socialNavBar .google-maps a:hover .icon-maps,
-nav#socialNavBar .google-maps a:focus .icon-maps {
-  background-image: image("googlemaps-white-black");
-}
-
 .fa-brands::before {
   transition: none;
 }
