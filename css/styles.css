@@ -303,42 +303,35 @@ nav#socialNavBar .faico a {
   color: var(--white);
   border-radius: 50%;
   display: inline-block;
-  width: 36px;
-  height: 36px;
+  width: 55px;
+  height: 55px;
   text-align: center;
   padding-top: 5px;
-  font-size: 1.3em;
+  font-size: 2.3em;
   transition: none;
 }
 
-nav#socialNavBar .faico a:hover,
-nav#socialNavBar .faico a:focus {
+nav#socialNavBar .whatsapp a:hover,
+nav#socialNavBar .whatsapp a:focus {
   color: var(--black);
   background-color: var(--white);
+}
+
+nav#socialNavBar .google-maps a:hover .icon-maps,
+nav#socialNavBar .google-maps a:focus .icon-maps {
+  background-image: image("googlemaps-white-black");
 }
 
 .fa-brands::before {
   transition: none;
 }
 
-nav#socialNavBar .faicon-facebook {
-  background-color: #3b5998;
+nav#socialNavBar .faicon-googlemaps {
+  background-color: #ffffff;
 }
 
-nav#socialNavBar .faicon-instagram {
-  background: #e1306c;
-}
-
-nav#socialNavBar .faicon-twitter {
-  background-color: #00acee;
-}
-
-nav#socialNavBar .faicon-tiktok {
-  background-color: #111111;
-}
-
-nav#socialNavBar .faicon-linkedin {
-  background-color: #0e76a8;
+nav#socialNavBar .faicon-whatsapp {
+  background: #14c520;
 }
 
 @media (min-width: 768px) {
@@ -347,7 +340,7 @@ nav#socialNavBar .faicon-linkedin {
   }
 
   nav#socialNavBar {
-    margin-top: 0px;
+    margin-top: 150px;
   }
 }
 
@@ -383,7 +376,7 @@ nav#socialNavBar .faicon-linkedin {
 #header .navbar-flex {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -604,7 +597,8 @@ nav#socialNavBar .faicon-linkedin {
 }
 
 .eatBetter-block-backgraund {
-  background: url(../images/woman-fruit.jpg) no-repeat;
+  background: url(../images/pelo.jpg) no-repeat;
+  background-size: cover;
   height: 33em;
   background-color: var(--second-grey);
 }
@@ -1172,6 +1166,7 @@ td img {
   color: var(--white);
   text-align: center;
   line-height: 0.5em;
+  font-size: 2em;
 }
 
 #footer a {
