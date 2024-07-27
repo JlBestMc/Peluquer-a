@@ -2,11 +2,11 @@
 @import url("fontawesome-free-6.5.1-web/css/all.min.css");
 
 :root {
-  --basic-brown: rgb(151, 82, 82);
-  --brown: brown;
+  --basic-brown: rgb(97, 30, 30);
+  --brown: rgb(145, 51, 51);
   --second-blue: #a3baff;
   --third-blue: #496ac95e;
-  --title-backgraund: rgba(73, 106, 201, 0.4);
+  --title-backgraund: rgba(97, 30, 30, 0.4);
   --dark-grey: #323639;
   --second-grey: #f2f2f2;
   --footer-text: #c1c2c4;
@@ -375,7 +375,7 @@ nav#socialNavBar .faicon-whatsapp {
   left: 0;
   z-index: 10;
   padding: 1rem 0 0 0;
-  border-bottom: 1px solid brown;
+  border-bottom: 1px solid var(--brown);
   background: var(--basic-brown);
 }
 
@@ -411,7 +411,7 @@ nav#socialNavBar .faicon-whatsapp {
 }
 
 .banner-title {
-  background-color: rgb(151, 82, 82, 0.4);
+  background-color: var(--title-backgraund);
   max-width: 480px;
   padding: 2rem 2rem 2rem 1rem;
 }
