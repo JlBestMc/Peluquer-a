@@ -273,8 +273,7 @@ header nav #drop:checked ~ #hamburguesa:after {
 
 nav#socialNavBar {
   position: fixed;
-  margin-left: 5%;
-  background-color: rgb(151, 82, 82, 0.4);
+  margin-left: 1%;
   border-radius: 10px;
   padding: 5px 5px 12px 5px;
   z-index: 2;
@@ -336,7 +335,7 @@ nav#socialNavBar .faicon-whatsapp {
   }
 
   nav#socialNavBar {
-    margin-top: 300px;
+    margin-top: 350px;
   }
 }
 
@@ -419,9 +418,10 @@ nav#socialNavBar .faicon-whatsapp {
 /************  ***************/
 #header .image-backgraund-int {
   background: var(--basic-brown);
-  background-image: url(../images/cabecera_int.jpg);
+  background-image: url(../images/cabecera6.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0px 0px;
   color: var(--white);
   background-size: 100%;
   margin-top: 3.5em;
@@ -432,6 +432,7 @@ nav#socialNavBar .faicon-whatsapp {
   font-size: 3rem;
   line-height: 1.3em;
   padding-top: 3.2em;
+  color: rgb(255, 255, 255);
 }
 
 #header .banner-title-int .logo {
