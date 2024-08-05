@@ -277,10 +277,14 @@ header nav #drop:checked ~ #hamburguesa:after {
 
 nav#socialNavBar {
   position: fixed;
-  margin-left: 1%;
-  border-radius: 10px;
-  padding: 5px 5px 12px 5px;
+  margin-left: -94%;
   z-index: 2;
+  padding: 3px;
+  background: linear-gradient(90deg, #777879, #323639);
+  border-radius: 18px;
+  transition: all 0.4s ease;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(47 46 46);
+  margin-top: 1700px;
 }
 
 header nav#socialNavBar ul {
@@ -341,7 +345,7 @@ nav#socialNavBar .faicon-whatsapp {
   }
 
   nav#socialNavBar {
-    margin-top: 325px;
+    margin-top: 1700px;
   }
 }
 
