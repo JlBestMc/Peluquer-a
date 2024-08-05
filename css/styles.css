@@ -355,7 +355,8 @@ nav#socialNavBar .faicon-whatsapp {
   }
 
   nav#socialNavBar {
-    margin-top: 400px;
+    margin-top: 1150px;
+    margin-left: -82%;
   }
 }
 
