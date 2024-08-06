@@ -38,7 +38,6 @@ select {
 *:before,
 *:after {
   box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
 }
 
 .container {
@@ -282,7 +281,6 @@ nav#socialNavBar {
   padding: 3px;
   background: linear-gradient(90deg, #777879, #323639);
   border-radius: 18px;
-  transition: all 0.4s ease;
   box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(47 46 46);
   margin-top: 1700px;
 }
@@ -317,13 +315,62 @@ nav#socialNavBar .faico a {
   text-align: center;
   padding-top: 5px;
   font-size: 2.3em;
-  transition: none;
 }
 
 nav#socialNavBar .whatsapp a:hover,
 nav#socialNavBar .whatsapp a:focus {
   color: var(--black);
   background-color: var(--white);
+}
+
+.question {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  padding: 5px 8px;
+  border-radius: 18px;
+  filter: drop-shadow(0 1px 4px rgba(255, 255, 255, 0.4));
+  opacity: 0;
+  pointer-events: none;
+  width: 330px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-out 0.4s;
+  background-color: #000000;
+  color: white;
+  transform: translate(80px, 20px);
+}
+
+.faico .question::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 20px;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-170px) rotate(45deg);
+  transition: 0.3s ease-out 0.4s;
+  opacity: 1;
+  background-color: #000000;
+}
+
+.faico .whatsapp:hover .question {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.faico .whatsapp:hover span,
+.faico .whatsapp:hover .question {
+  text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.1);
+}
+
+.faico .whatsapp:hover .question,
+.faico .whatsapp:hover .question::before {
+  background: #1a1919;
+  color: #ffffff;
 }
 
 .fa-brands::before {
@@ -385,7 +432,7 @@ nav#socialNavBar .faicon-whatsapp {
   left: 0;
   z-index: 10;
   padding: 1rem 0 0 0;
-  border-bottom: 1px solid var(--brown);
+  border-bottom: 1px solid #444749;
   background: var(--basic-brown);
 }
 
@@ -425,6 +472,7 @@ nav#socialNavBar .faicon-whatsapp {
   max-width: 480px;
   padding: 2rem 2rem 2rem 1rem;
   border-radius: 20px;
+  border: 1px solid;
 }
 
 /************  ***************/
