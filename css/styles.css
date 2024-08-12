@@ -6,7 +6,7 @@
   --brown: rgb(0, 0, 0);
   --second-blue: rgb(216, 190, 149);
   --third-blue: #496ac95e;
-  --title-backgraund: rgba(0, 0, 0, 0.4);
+  --title-backgraund: rgba(0, 0, 0, 0.248);
   --dark-grey: #323639;
   --second-grey: #f2f2f2;
   --footer-text: #c1c2c4;
@@ -24,7 +24,7 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.3em;
-  background-color: rgb(42, 45, 48);
+  background-color: rgb(30, 30, 30);
 }
 
 body,
@@ -278,10 +278,10 @@ nav#socialNavBar {
   position: fixed;
   margin-left: -94%;
   z-index: 2;
-  padding: 3px;
-  background: linear-gradient(90deg, #151515, #bdbdbde6);
+  padding: 4px;
+  background: linear-gradient(90deg, #14c520, #252925);
   border-radius: 18px;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(47 46 46);
+  box-shadow: 0.7rem 0.7rem #05060f;
   margin-top: 1700px;
 }
 
@@ -295,7 +295,7 @@ nav#socialNavBar .faico {
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: #000000;
+  background-color: #9cd990;
   border-radius: 18px;
 }
 
@@ -432,7 +432,7 @@ nav#socialNavBar .faicon-whatsapp {
   left: 0;
   z-index: 10;
   padding: 1rem 0 0 0;
-  border-bottom: 1px solid #444749;
+  border-bottom: 3px solid #000000;
   background: var(--basic-brown);
 }
 
@@ -472,8 +472,8 @@ nav#socialNavBar .faicon-whatsapp {
   max-width: 482px;
   padding: 2rem 2rem 2rem 1rem;
   border-radius: 20px;
-  border: 2px solid;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+  border: 3px solid black;
+  box-shadow: 0.7rem 0.7rem #05060f;
 }
 
 /************  ***************/
@@ -766,7 +766,7 @@ nav#socialNavBar .faicon-whatsapp {
 
 main {
   order: 1;
-  background-color: rgb(42, 45, 48);
+  background-color: rgb(30, 30, 30);
   /* Cambia el orden */
 }
 
@@ -1085,13 +1085,6 @@ aside nav#socialNavBar {
   background-color: var(--red);
   padding: 20px;
   color: var(--white);
-  display: grid;
-  grid-template-rows: auto 1fr;
-  /* Dos filas, la primera se ajusta al contenido, la segunda toma el espacio restante */
-  grid-template-columns: 1fr 4fr;
-  /* Dos columnas, una que ocupa 1fr y otra que ocupa 4fr */
-  gap: 20px;
-  /* Espacio entre los elementos */
 }
 
 .tips-fa {
@@ -1123,7 +1116,7 @@ h3.tips-title {
 @media (min-width: 768px) {
   .products-tips {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
 }
@@ -1345,4 +1338,225 @@ span.padding-footer-contact {
     grid-template-columns: 5fr 1fr;
     grid-gap: 100px;
   }
+}
+
+.slider {
+  top: 10%;
+  left: 50%;
+  width: 400px;
+  /*   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); */
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#items {
+  width: 10000px;
+  position: relative;
+  top: 0;
+  left: -400px;
+}
+
+#items.shifting {
+  transition: left 0.2s ease-out;
+}
+
+.slide {
+  width: 400px;
+  height: 550px;
+  cursor: pointer;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+  position: relative;
+}
+
+.slider.loaded .slide:nth-child(2),
+.slider.loaded .slide:nth-child(7) {
+  background: #ffcf47;
+  border-radius: 10px;
+}
+.slider.loaded .slide:nth-child(1),
+.slider.loaded .slide:nth-child(6) {
+  background: #7adcef;
+  border-radius: 10px;
+}
+.slider.loaded .slide:nth-child(3) {
+  background: #dff8ec;
+  border-radius: 10px;
+}
+.slider.loaded .slide:nth-child(4) {
+  background: #a78df5;
+  border-radius: 10px;
+}
+.slider.loaded .slide:nth-child(5) {
+  background: #ff8686;
+  border-radius: 10px;
+}
+
+.content {
+  width: 400px;
+  height: 560px;
+  border-radius: 10px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0), 0 0 30px rgba(0, 0, 0, 0.1) inset;
+  position: relative;
+  margin-top: 0px;
+}
+
+.up {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px 10px 0 0;
+  background: rgba(28, 216, 210, 1);
+  background: rgba(28, 216, 210, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(28, 216, 210, 1) 0%,
+    rgba(147, 237, 199, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(28, 216, 210, 1)),
+    color-stop(100%, rgba(147, 237, 199, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(28, 216, 210, 1) 0%,
+    rgba(147, 237, 199, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(28, 216, 210, 1) 0%,
+    rgba(147, 237, 199, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(28, 216, 210, 1) 0%,
+    rgba(147, 237, 199, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(28, 216, 210, 1) 0%,
+    rgba(147, 237, 199, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cd8d2', endColorstr='#93edc7', GradientType=0 );
+}
+
+.producto {
+  width: 300px;
+  height: 400px;
+  background-size: 320px 540px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: calc(50% - 150px);
+  position: relative;
+  top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.16), 0 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pro_1 {
+  background-image: url(../images/peluqueria-mirror.jpeg);
+}
+
+.pro_2 {
+  background-image: url(../images/peluqueria-asiento.jpeg);
+}
+
+.pro_3 {
+  background-image: url(../images/peluqueria-in.jpeg);
+}
+.pro_4 {
+  background-image: url(../images/Peluqueria-front.jpeg);
+}
+
+.pro_5 {
+  background-image: url("https://images.unsplash.com/photo-1518938630361-6245118b5415?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7403b7c93dcaeafcb7faa2b194b6cb98&auto=format&fit=crop&w=634&q=80");
+}
+
+.price {
+  width: 0px;
+  height: 70px;
+  border-radius: 2px;
+  border-left: 40px solid #ff1f45;
+  border-right: 40px solid #ff1f45;
+  border-bottom: 20px solid transparent;
+  float: right;
+  margin-right: 0px;
+  top: -40px;
+  position: relative;
+}
+
+.price p {
+  color: #ffffff;
+  width: 27px;
+  float: right;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.button2 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  font-weight: bold;
+  padding: 14px 0px;
+  color: #ffffff;
+  border-radius: 5px;
+  position: relative;
+  background-color: #1cd8d2;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.16), 0 0px 6px rgba(0, 0, 0, 0.1);
+  margin-left: calc(150px - 50px);
+  top: 70px;
+}
+
+.button2:hover {
+  background-color: #93edc7;
+  color: #ffffff;
+}
+
+.control {
+  position: absolute;
+  top: 88%;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 20px;
+  margin-top: -20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.prev,
+.next {
+  background-size: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.prev {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+  left: 57.6%;
+}
+
+.next {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+  right: 19.3%;
+}
+
+.prev:active,
+.next:active {
+  transform: scale(0.8);
 }
