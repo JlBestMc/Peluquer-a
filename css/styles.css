@@ -24,7 +24,9 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.3em;
-  background-color: rgb(30, 30, 30);
+  background-image: url(../images/background8.png);
+  background-repeat: repeat-y;
+  background-size: contain;
 }
 
 body,
@@ -83,7 +85,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.6em;
+  font-size: 1.8em;
   line-height: 1.3em;
   color: white;
 }
@@ -680,7 +682,6 @@ nav#socialNavBar .faicon-whatsapp {
 
 /****************** eatBetter  section **********************/
 .eatBetter-backgraund {
-  background-size: cover;
   margin-top: 518px;
 }
 
@@ -691,23 +692,31 @@ nav#socialNavBar .faicon-whatsapp {
 }
 
 .eatBetter-block-backgraund {
-  background: url(../images/pelo.jpg) no-repeat;
-  background-size: cover;
-  height: 33em;
-  background-color: var(--second-grey);
+  background: url(../images/Palo\ Barbershop.webp) no-repeat;
+  background-size: contain;
+  height: 50em;
 }
 
 .eatBetter-block-text {
-  background-color: var(--second-grey);
   padding: 2em;
 }
 
+.eatBetter-block-text h1 {
+  color: rgb(211, 176, 111);
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1em;
+}
+
 .eatBetter-block-text p {
-  color: #000000;
+  font-size: 1.8em;
+  line-height: 1em;
 }
 
 .eatBetter-block-text h3 {
-  color: #000000;
+  font-size: 3.3em;
+  color: rgb(211, 176, 111);
+  line-height: 1em;
 }
 
 .shape-circle-red {
@@ -724,32 +733,15 @@ nav#socialNavBar .faicon-whatsapp {
 }
 
 @media (min-width: 768px) {
-  .shape-circle-blue {
-    width: 228px;
-    height: 228px;
-    margin: -120px auto 100px 35%;
-    background-color: var(--basic-brown);
-    border: 12px solid var(--white);
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .shape-circle-red {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 12px solid var(--white);
-    margin: 1em 7em 4em auto;
-  }
-
   .eatBetter-block {
     grid-template-columns: 1fr 1fr;
-    padding: 0em 10em;
+    padding: 0em 5em;
     margin-top: -150px;
   }
 
   .eatBetter-backgraund {
-    margin-top: 80px;
+    margin-top: 230px;
+    margin-bottom: 76px;
   }
 }
 
@@ -766,7 +758,6 @@ nav#socialNavBar .faicon-whatsapp {
 
 main {
   order: 1;
-  background-color: rgb(30, 30, 30);
   /* Cambia el orden */
 }
 
