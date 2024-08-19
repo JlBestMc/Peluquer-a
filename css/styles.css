@@ -680,66 +680,54 @@ nav#socialNavBar .faicon-whatsapp {
   }
 }
 
-/****************** eatBetter  section **********************/
-.eatBetter-backgraund {
+/****************** servicios  section **********************/
+.servicios-backgraund {
   margin-top: 518px;
 }
 
-.eatBetter-block {
+.servicios-block {
   display: grid;
   grid-template-columns: 1fr;
   margin-top: -690px;
 }
 
-.eatBetter-block-backgraund {
-  background: url(../images/Palo\ Barbershop.webp) no-repeat;
+.servicios-block-backgraund {
+  background: url(../images/barber-pole.webp) no-repeat;
   background-size: contain;
   height: 50em;
 }
 
-.eatBetter-block-text {
+.servicios-block-text {
   padding: 2em;
 }
 
-.eatBetter-block-text h1 {
+.servicios-block-text h1 {
   color: rgb(211, 176, 111);
   font-size: 2em;
   font-family: "Montserrat", sans-serif;
   line-height: 1em;
 }
 
-.eatBetter-block-text p {
+.servicios-block-text p {
   font-size: 1.8em;
   line-height: 1em;
 }
 
-.eatBetter-block-text h3 {
+.servicios-block-text h3 {
   font-size: 3.3em;
   color: rgb(211, 176, 111);
   line-height: 1em;
-}
-
-.shape-circle-red {
-  width: 45px;
-  height: 90px;
-  margin: 0em 0em 7em auto;
-  background-color: var(--red);
-  border-style: solid;
-  border-color: var(--white);
-  border-width: 12px 0px 12px 12px;
-  border-bottom-left-radius: 90px;
-  border-top-left-radius: 90px;
-  position: relative;
+  margin-top: 0.2em;
 }
 
 @media (min-width: 768px) {
-  .eatBetter-block {
+  .servicios-block {
     grid-template-columns: 1fr 1fr;
     padding: 0em 5em;
     margin-top: -150px;
   }
 
-  .eatBetter-backgraund {
+  .servicios-backgraund {
     margin-top: 230px;
     margin-bottom: 76px;
   }
