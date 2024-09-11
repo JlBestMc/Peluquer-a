@@ -701,6 +701,63 @@ nav#socialNavBar .faicon-whatsapp {
   padding: 2em;
 }
 
+#cortes {
+  display: flex;
+  align-items: center;
+}
+
+#hr1-corte {
+  width: 46%;
+  border-width: 0px 0px 2px 0px;
+  border-color: white;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+#hr2-corte {
+  width: 52%;
+  border-width: 0px 0px 2px 0px;
+  border-color: white;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+#hr3-corte {
+  width: 28%;
+  border-width: 0px 0px 2px 0px;
+  border-color: white;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+#hr4-corte {
+  width: 40%;
+  border-width: 0px 0px 2px 0px;
+  border-color: white;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+#hr5-corte {
+  width: 45%;
+  border-width: 0px 0px 2px 0px;
+  border-color: white;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+#hr6-corte {
+  width: 45%;
+  border-width: 0px 0px 2px 0px;
+  border-color: white;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.p-cortes {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
 .servicios-block-text h1 {
   color: rgb(211, 176, 111);
   font-size: 2em;
@@ -733,7 +790,28 @@ nav#socialNavBar .faicon-whatsapp {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 300px) and (max-width: 700px) {
+  .servicios-block-text p {
+    font-size: 1.2em;
+  }
+  .servicios-block-backgraund {
+    background: url(../images/barber-pole.webp) no-repeat;
+    background-size: contain;
+    height: 0em;
+    margin-bottom: 160px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+  .servicios-block-text p {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1100px) {
+  .servicios-block-text p {
+    font-size: 1.4em;
+  }
 }
 
 /****************  int pages  *******************/

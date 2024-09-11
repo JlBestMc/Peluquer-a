@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peluquería Elegance - Nuestro Local</title>
+    <style>
+      /* Estilos CSS */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #fff8e1, #ffe0b2);
+        color: #4a4a4a;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        color: #b71c1c;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: #d32f2f;
+        font-size: 1.2em;
+      }
+
+      .carousel {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-item {
+        min-width: 100%;
+        height: 400px;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .carousel-control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.5);
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .carousel-control.prev {
+        left: 10px;
+      }
+      .carousel-control.next {
+        right: 10px;
+      }
+
+      .view-full {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: #d32f2f;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .info-section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .info-card {
+        flex: 1;
+        min-width: 300px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-card h2 {
+        color: #b71c1c;
+        margin-bottom: 15px;
+      }
+
+      .info-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .info-list li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .info-list li::before {
+        content: "•";
+        color: #d32f2f;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-right: 0.5em;
+      }
+
+      @media (max-width: 768px) {
+        .info-section {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Peluquería Elegance</h1>
+        <p class="subtitle">Donde el estilo cobra vida</p>
+      </header>
+
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img src="./images/peluqueria-asiento.jpeg" alt="Sala Principal" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/Peluqueria-front.jpeg" alt="Área de Lavado" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/peluqueria-mirror.jpeg" alt="Zona de Corte" />
+          </div>
+        </div>
+        <button class="carousel-control prev">&lt;</button>
+        <button class="carousel-control next">&gt;</button>
+        <button class="view-full">Ver completa</button>
+      </div>
+
+      <div class="info-section">
+        <div class="info-card">
+          <h2>Sobre Nosotros</h2>
+          <p>
+            Bienvenido a Peluquería Elegance, donde la belleza se encuentra con
+            el estilo. Nuestro equipo de estilistas expertos está dedicado a
+            realzar tu belleza natural y ayudarte a expresar tu estilo único.
+            Con años de experiencia y un ojo para las últimas tendencias,
+            garantizamos que saldrás sintiéndote renovado y confiado.
+          </p>
+        </div>
+        <div class="info-card">
+          <h2>Información del Local</h2>
+          <ul class="info-list">
+            <li>Calle Principal 123, Ciudad</li>
+            <li>Lunes a Sábado: 9:00 AM - 8:00 PM</li>
+            <li>+1 234 567 8900</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="fullImage" />
+    </div>
+
+    <script>
+      // JavaScript para el carrusel y el modal
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".carousel-inner");
+        const items = carousel.querySelectorAll(".carousel-item");
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
+        const viewFullBtn = document.querySelector(".view-full");
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("fullImage");
+        const closeBtn = document.querySelector(".close");
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+          carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prevBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + items.length) % items.length;
+          showImage(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % items.length;
+          showImage(currentIndex);
+        });
+
+        viewFullBtn.addEventListener("click", () => {
+          const currentImg = items[currentIndex].querySelector("img");
+          modalImg.src = currentImg.src;
+          modal.style.display = "block";
+        });
+
+        closeBtn.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (event) => {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
